@@ -1,0 +1,60 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Wishlists Suite">
+    <test name="Create Wishlist Tests">
+        <classes>
+            <class name="Tests.Books.TC01_CreateBook">
+                <methods>
+                    <include name="createBookTC"/>
+                </methods>
+            </class>
+            <class name="Tests.Wishlists.TC01_CreateWishlist"/>
+        </classes>
+    </test>
+    <test name="Retrieve Wishlist Tests">
+        <classes>
+            <class name="Tests.Wishlists.TC02_RetrieveWishlist">
+                <methods>
+                    <exclude name="retrieveUpdatedWishlistTC"/>
+                    <exclude name="retrievePartiallyUpdatedWishlistTC"/>
+                    <exclude name="retrieveDeletedWishlistTC"/>
+                </methods>
+            </class>
+            <class name="Tests.Wishlists.TC03_RetrieveAllWishlists"/>
+        </classes>
+    </test>
+    <test name="Update Wishlist Tests">
+        <classes>
+            <class name="Tests.Books.TC01_CreateBook">
+                <methods>
+                    <include name="createBookTC"/>
+                </methods>
+            </class>
+            <class name="Tests.Wishlists.TC04_UpdateWishlist"/>
+            <class name="Tests.Wishlists.TC02_RetrieveWishlist">
+                <methods>
+                    <include name="retrieveUpdatedWishlistTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Partial Update Wishlist Tests">
+        <classes>
+            <class name="Tests.Wishlists.TC05_PartialUpdateWishlist"/>
+            <class name="Tests.Wishlists.TC02_RetrieveWishlist">
+                <methods>
+                    <include name="retrievePartiallyUpdatedWishlistTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete Wishlist Tests">
+        <classes>
+            <class name="Tests.Wishlists.TC06_DeleteWishlist"/>
+            <class name="Tests.Wishlists.TC02_RetrieveWishlist">
+                <methods>
+                    <include name="retrieveDeletedWishlistTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

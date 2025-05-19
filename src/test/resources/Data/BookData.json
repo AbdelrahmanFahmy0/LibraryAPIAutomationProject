@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt and David Thomas",
+      "isbn": "978-0201616224",
+      "releaseDate": "1999-10-30"
+    },
+    {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "isbn": "978-0132350884",
+      "releaseDate": "2008-08-11"
+    },
+    {
+      "title": "Effective Java",
+      "author": "Joshua Bloch",
+      "isbn": "978-0134685991",
+      "releaseDate": "2018-01-06"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Users Suite">
+    <test name="Create User Tests">
+        <classes>
+            <class name="Tests.Users.TC01_CreateUser"/>
+        </classes>
+    </test>
+    <test name="Retrieve User Tests">
+        <classes>
+            <class name="Tests.Users.TC02_RetrieveUser">
+                <methods>
+                    <exclude name="retrieveUpdatedUserTC"/>
+                    <exclude name="retrievePartiallyUpdatedUserTC"/>
+                    <exclude name="retrieveDeletedUserTC"/>
+                </methods>
+            </class>
+            <class name="Tests.Users.TC03_RetrieveAllUsers"/>
+        </classes>
+    </test>
+    <test name="Update User Tests">
+        <classes>
+            <class name="Tests.Users.TC04_UpdateUser"/>
+            <class name="Tests.Users.TC02_RetrieveUser">
+                <methods>
+                    <include name="retrieveUpdatedUserTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Partial Update User Tests">
+        <classes>
+            <class name="Tests.Users.TC05_PartialUpdateUser"/>
+            <class name="Tests.Users.TC02_RetrieveUser">
+                <methods>
+                    <include name="retrievePartiallyUpdatedUserTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete User Tests">
+        <classes>
+            <class name="Tests.Users.TC06_DeleteUser"/>
+            <class name="Tests.Users.TC02_RetrieveUser">
+                <methods>
+                    <include name="retrieveDeletedUserTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

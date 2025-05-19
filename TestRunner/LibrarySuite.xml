@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Library Suite">
+    <suite-files>
+        <suite-file path="booksSuite.xml"/>
+        <suite-file path="householdsSuite.xml"/>
+        <suite-file path="usersSuite.xml"/>
+        <suite-file path="wishlistSuite.xml"/>
+    </suite-files>
+</suite>

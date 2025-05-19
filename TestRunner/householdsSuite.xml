@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Households Suite">
+    <test name="Create Household Tests">
+        <classes>
+            <class name="Tests.Households.TC01_CreateHousehold"/>
+        </classes>
+    </test>
+    <test name="Retrieve Household Tests">
+        <classes>
+            <class name="Tests.Households.TC02_RetrieveHousehold">
+                <methods>
+                    <exclude name="retrieveUpdatedHouseholdTC"/>
+                    <exclude name="retrievePartiallyUpdatedHouseholdTC"/>
+                    <exclude name="retrieveDeletedHouseholdTC"/>
+                </methods>
+            </class>
+            <class name="Tests.Households.TC03_RetrieveAllHouseholds"/>
+        </classes>
+    </test>
+    <test name="Update Household Tests">
+        <classes>
+            <class name="Tests.Households.TC04_UpdateHousehold"/>
+            <class name="Tests.Households.TC02_RetrieveHousehold">
+                <methods>
+                    <include name="retrieveUpdatedHouseholdTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Partial Update Household Tests">
+        <classes>
+            <class name="Tests.Households.TC05_PartialUpdateHousehold"/>
+            <class name="Tests.Households.TC02_RetrieveHousehold">
+                <methods>
+                    <include name="retrievePartiallyUpdatedHouseholdTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete Household Tests">
+        <classes>
+            <class name="Tests.Households.TC06_DeleteHousehold"/>
+            <class name="Tests.Households.TC02_RetrieveHousehold">
+                <methods>
+                    <include name="retrieveDeletedHouseholdTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

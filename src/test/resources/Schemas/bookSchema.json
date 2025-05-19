@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "releaseDate": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "isbn": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "releaseDate",
+    "author",
+    "isbn",
+    "title",
+    "createdAt",
+    "updatedAt",
+    "id"
+  ]
+}

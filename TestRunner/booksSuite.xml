@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Books Suite">
+    <test name="Create Book Tests">
+        <classes>
+            <class name="Tests.Books.TC01_CreateBook"/>
+        </classes>
+    </test>
+    <test name="Retrieve Book Tests">
+        <classes>
+            <class name="Tests.Books.TC02_RetrieveBook">
+                <methods>
+                    <exclude name="retrieveUpdatedBookTC"/>
+                    <exclude name="retrievePartiallyUpdatedBookTC"/>
+                    <exclude name="retrieveDeletedBookTC"/>
+                </methods>
+            </class>
+            <class name="Tests.Books.TC03_RetrieveAllBooks"/>
+        </classes>
+    </test>
+    <test name="Update Book Tests">
+        <classes>
+            <class name="Tests.Books.TC04_UpdateBook"/>
+            <class name="Tests.Books.TC02_RetrieveBook">
+                <methods>
+                    <include name="retrieveUpdatedBookTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Partial Update Book Tests">
+        <classes>
+            <class name="Tests.Books.TC05_PartialUpdateBook"/>
+            <class name="Tests.Books.TC02_RetrieveBook">
+                <methods>
+                    <include name="retrievePartiallyUpdatedBookTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete Book Tests">
+        <classes>
+            <class name="Tests.Books.TC06_DeleteBook"/>
+            <class name="Tests.Books.TC02_RetrieveBook">
+                <methods>
+                    <include name="retrieveDeletedBookTC"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

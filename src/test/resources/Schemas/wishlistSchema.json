@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "books": {
+      "type": "array",
+      "items": [
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "books",
+    "name",
+    "createdAt",
+    "updatedAt",
+    "id"
+  ]
+}
