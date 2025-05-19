@@ -21,7 +21,7 @@ This project automates the testing of a real **Library API** that manages Books,
 
 - Java Development Kit (JDK) installed
 - IDE (eg: IntelliJ IDEA, Eclipse)
-- Maven or Gradle installed
+- Maven installed
 ---
 
 ## 📄 Features Covered
